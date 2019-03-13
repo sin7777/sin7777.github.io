@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
   
-  <meta name="keywords" content="sin">
+  <meta name="keywords" content="雷紫薇">
   <meta name="description" content="Adiana‘s blog">
   
   <title>Hexo</title>
@@ -40,22 +40,14 @@
       <ul id="slide-out" class="side-nav">
     <div class="nav-header" style="background-image: url(/images/header-bg.png);background-color:#26A69A">
     <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
-    <p>John Doe</p>
+    <p>Adiana</p>
     <div class="nav-link">
-        
-        <a href="http://example.com" target="_blank"> <div class="link-box twitter"></div></a>
         
         
         <a href="https://github.com/sin7777" target="_blank"><div class="link-box github"></div></a>
         
         
-        <a href="mailto:http://example.com"><div class="link-box email"></div></a>
         
-        
-        <a href="http://example.com" target="_blank"><div class="link-box weibo"></div></a>
-        
-        
-        <a href="http://example.com" target="_blank"> <div class="link-box zhihu"></div></a>
         
     </div>
     <div class="nav-search">
@@ -85,7 +77,7 @@
 
 <ul class="dropdown-menu dropdown">
     <li class="nav-dropdown-list">
-        <a class="archive-link" href="/archives/2019/03/">March 2019<span class="archive-count">2</span></a>
+        <a class="archive-link" href="/archives/2019/02/">February 2019<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2018/11/">November 2018<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2018/03/">March 2018<span class="archive-count">1</span></a>
     </li>
 </ul>
 <!--categories-->
@@ -119,25 +111,37 @@
   <div id="content-inner">
     
 <article id="post">
-  <div class="post-page-title" style="background-color:#26A69A;background-image:url(/images/random/vateral-4.png)">
-  <h2>Hello World</h2>
+  <div class="post-page-title" style="background-color:#26A69A;background-image:url(/images/work.jpg)">
+  <h2>Git操作远程仓库</h2>
     
-  <p>作者:John Doe &nbsp&nbsp 发布于:<time datetime="2019-03-02T15:36:57.744Z">
-          2019-03-02
+  <p>作者:Adiana &nbsp&nbsp 发布于:<time datetime="2018-03-02T15:41:59.000Z">
+          2018-03-02
     </time>
   </p>
     
   </div>
   <div class="post-page-content">
-  <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+  <h3 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h3><ul>
+<li>新建文件夹</li>
+<li>git config –global user.name</li>
+<li>git config –global user.email</li>
+<li>确认配置信息 git config –list</li>
+<li>生成公钥 ssh-keygen -t rsa -C “email”</li>
+<li>把公钥推到github.com</li>
+<li>git clone https/ssh<h3 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h3></li>
+<li>新建文件夹</li>
+<li>git init</li>
+<li>git add .</li>
+<li>git remote add origin 远程地址</li>
+<li>git fetch origin 分支名 </li>
+<li>git branch 新分支   <em>本地新建分支</em></li>
+<li>git checkout 分支   <em>切换本地分支</em></li>
+<li>git push origin 本地分支  <em>将本地分支推到远程 origin为远程分支的默认名称</em><ul>
+<li>git push origin 本地分支:master(远程分支）</li>
+</ul>
+</li>
+<li>git pull origin 远程分支 <em>拉取远程分支</em></li>
+</ul>
 
   </div>
   <!--评论块-->
@@ -147,7 +151,7 @@
 <nav class="post-nav">
   <!-- Prev Nav -->
     
-  <a href="/2019/03/02/Helloword/" id="post_nav-newer" class="post-nav-content prev-content">
+  <a href="/2018/11/13/Git解决冲突/" id="post_nav-newer" class="post-nav-content prev-content">
       新篇
   </a>
     
@@ -159,7 +163,7 @@
 <div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
 <div class="post-toc-none"><p>(无)</p></div>
 <div class="post-toc-box">
-    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#Quick-Start"><span class="post-toc-number">1.</span> <span class="post-toc-text">Quick Start</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Create-a-new-post"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">Create a new post</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Run-server"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">Run server</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Generate-static-files"><span class="post-toc-number">1.3.</span> <span class="post-toc-text">Generate static files</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Deploy-to-remote-sites"><span class="post-toc-number">1.4.</span> <span class="post-toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#方法一"><span class="post-toc-number">1.</span> <span class="post-toc-text">方法一</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#方法二"><span class="post-toc-number">2.</span> <span class="post-toc-text">方法二</span></a></li></ol>
 </div>
 <!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
 <script type="text/javascript">

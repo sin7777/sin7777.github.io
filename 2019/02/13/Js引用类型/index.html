@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="雷紫薇">
+  <meta name="description" content="Adiana‘s blog">
+  
+  <title>Hexo</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
+</head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu"><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav">
+    <div class="nav-header" style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>Adiana</p>
+    <div class="nav-link">
+        
+        
+        <a href="https://github.com/sin7777" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off">
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class="no-result">无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a class target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown">
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2019/02/">February 2019<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2018/11/">November 2018<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2018/03/">March 2018<span class="archive-count">1</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown">
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<article id="post">
+  <div class="post-page-title" style="background-color:#26A69A;background-image:url(/images/tap3.jpg)">
+  <h2>Js引用类型</h2>
+    
+  <p>作者:Adiana &nbsp&nbsp 发布于:<time datetime="2019-02-13T12:23:05.000Z">
+          2019-02-13
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <blockquote>
+<p>引用类型是js中非常重要的一种数据格式，js赋予了这种数据格式非常强大的属性以及方法，而且也给出了很大的扩展空间，这使得之后的框架可以在此基础上发展起来</p>
+</blockquote>
+<p>Js中给出的引用类型分为7类，下面一一介绍</p>
+<h3 id="Object类型"><a href="#Object类型" class="headerlink" title="Object类型"></a>Object类型</h3><p>Object类型是使用最多的一个类型，是存储数据以及传输数据的理想选择<br>访问对象属性可以用点表示法，也可以使用方括号表示法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//创建对象</span><br><span class="line">let person = new Object(); //方式一</span><br><span class="line">let person = &#123;             //方式二</span><br><span class="line">    name: &quot;&quot;,</span><br><span class="line">    age: 8</span><br><span class="line">&#125;</span><br><span class="line">//访问对象</span><br><span class="line">alert(person.name);</span><br><span class="line">alert(person[&quot;name&quot;]);</span><br></pre></td></tr></table></figure></p>
+<h3 id="Array类型"><a href="#Array类型" class="headerlink" title="Array类型"></a>Array类型</h3><p>创建数组的方式有很多<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">let colors = new Array();</span><br><span class="line">let colors = new Array(20);</span><br><span class="line">let colors = new Array(&quot;bule&quot;);</span><br><span class="line">let colors = Array(20);</span><br><span class="line">let colors = Array(&quot;bule&quot;);</span><br><span class="line">let colors = [&quot;blue&quot;,&quot;red&quot;,&quot;green&quot;];</span><br><span class="line">let colors = [];</span><br></pre></td></tr></table></figure></p>
+<p>可以通过数组的属性length来访问数组，添加数组元素</p>
+<h4 id="检测数组"><a href="#检测数组" class="headerlink" title="检测数组"></a>检测数组</h4><p>检测对象是否属于数组</p>
+<ul>
+<li>instanceof()</li>
+<li>isArray()<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">if(value instanceof Array)&#123;     //ture or false</span><br><span class="line">    //执行操作</span><br><span class="line">&#125;</span><br><span class="line">if(Array.isArray(value))&#123;     //ture or false</span><br><span class="line">    //执行操作</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="转换方法"><a href="#转换方法" class="headerlink" title="转换方法"></a>转换方法</h4><p>把数组转换成为string等其他类型</p>
+<ul>
+<li>valueOf()</li>
+<li>toString()</li>
+<li>toLocaleString()</li>
+<li>join()<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let colors = [&quot;blue&quot;,&quot;red&quot;,&quot;green&quot;];</span><br><span class="line">alert(colors.join(&quot;,&quot;));     //blue,red,green</span><br><span class="line">alert(colors.join(&quot;||&quot;));     //blue||red||green</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="栈方法"><a href="#栈方法" class="headerlink" title="栈方法"></a>栈方法</h4><p>数组可以使用下面方法实现栈(LIFO)的数据结构，对数组的末端进行操作</p>
+<ul>
+<li>push()<br>  推入到数组的最后一项</li>
+<li>pop()<br>  移除并取得数组最后一项</li>
+</ul>
+<h4 id="队列方法"><a href="#队列方法" class="headerlink" title="队列方法"></a>队列方法</h4><p>数组可以使用下面方法实现队列(FIFO)的数据结构，对数组开头和结尾进行操作</p>
+<ul>
+<li>push()</li>
+<li>shift()<br>  移除并取得数组第一项</li>
+<li>unshift()<br>  推入到数组的第一项</li>
+</ul>
+<h4 id="重排序方法"><a href="#重排序方法" class="headerlink" title="重排序方法"></a>重排序方法</h4><p>对数组中的元素重新排序</p>
+<ul>
+<li>reverse()<br>  反转数组的顺序 </li>
+<li>sort()<br>  按升序对数组进行排序，先对数组的每个元素调用toString()的方法<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">let values = [0,1,5,10,15];</span><br><span class="line">values.sort();</span><br><span class="line">alert(values);      //0,1,10,15,5  比较字符</span><br><span class="line">//要实现真正排序，需要写下面的函数</span><br><span class="line">function conmpare(value1,value2)&#123;</span><br><span class="line">    if(value1 &lt; value2)&#123;</span><br><span class="line">        return -1;</span><br><span class="line">    &#125;</span><br><span class="line">    if(value1 &gt; value2)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        return 0;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">values.sort(compare);</span><br><span class="line">alert(values);      //0,1,5,10,15  升序，若实现降序，将return -1改成return 1即可</span><br><span class="line"></span><br><span class="line">//简单的排序函数</span><br><span class="line">function compare(vaule1,value2)&#123;</span><br><span class="line">    return value2-value1;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="操作方法"><a href="#操作方法" class="headerlink" title="操作方法"></a>操作方法</h4><ul>
+<li>concat()<br>  连接几个数组，返回一个数组</li>
+<li><p>slice()<br>  基于当前数组创建一个新的数组,接受一个或者两个参数</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">let colors = [&quot;blue&quot;,&quot;red&quot;,&quot;green&quot;,&quot;yellow&quot;,&quot;purple&quot;];</span><br><span class="line">let colors1 = colors.slice(1));     //red,green,yellow,purple</span><br><span class="line">let colors2 = colors.slice(1,4));     //red,green,yellow</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>splice()<br>  接受两个以上的参数，参数1–&gt;起始位置，参数2–&gt;删除几项，之后的参数表示需要插入的项，splice()方法可以实现对数组元素的删除，插入和替换</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">let colors = [&quot;blue&quot;,&quot;red&quot;,&quot;green&quot;,&quot;yellow&quot;,&quot;purple&quot;];</span><br><span class="line">//删除</span><br><span class="line">let delete = colors.splice(0,1);    </span><br><span class="line">//colors = [&quot;red&quot;,&quot;green&quot;,&quot;yellow&quot;,&quot;purple&quot;] delete = [&quot;blue&quot;]</span><br><span class="line"></span><br><span class="line">//插入</span><br><span class="line">let insert = colors.splice(1,0,&quot;orange&quot;,&quot;black&quot;);   </span><br><span class="line">//colors = [&quot;red&quot;,&quot;orange&quot;,&quot;black&quot;,&quot;green&quot;,&quot;yellow&quot;,&quot;purple&quot;]  insert = []空数组</span><br><span class="line"></span><br><span class="line">//替换</span><br><span class="line">let replace = colors.splice(1,1,&quot;blue&quot;);   //colors = [&quot;red&quot;,&quot;blue&quot;,&quot;black&quot;,&quot;green&quot;,&quot;yellow&quot;,&quot;purple&quot;] replace = [&quot;orange&quot;]</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="位置方法"><a href="#位置方法" class="headerlink" title="位置方法"></a>位置方法</h4><p>查找数组中某个元素位于数组中的位置（索引）</p>
+<ul>
+<li>indexOf()</li>
+<li>lastIndexOf()</li>
+</ul>
+<h4 id="迭代方法"><a href="#迭代方法" class="headerlink" title="迭代方法"></a>迭代方法</h4><p>迭代方法是对函数每一项进行操作，一共为数组定义了5个迭代方法</p>
+<ul>
+<li>every()<br>  对数组每一项运行函数，如果每一项都返回ture，则返回ture</li>
+<li>filter()<br>  对数组每一项运行函数，该函数会返回ture的项组成的数组</li>
+<li>forEach()<br>  对数组每一项运行函数，没有返回值</li>
+<li>map()<br>  对数组每一项运行函数，返回每次函数调用的结果组成的数组</li>
+<li>some()<br>  对数组每一项运行函数，如果该函数任意一项返回ture，该函数返回ture<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">let numbers = [1,2,3,4,5,4,3,2,1];</span><br><span class="line"></span><br><span class="line">let everyResult = numbers.every(function(item,index,array)&#123;</span><br><span class="line">    return (item &gt; 2);</span><br><span class="line">&#125;) //everyResult = false</span><br><span class="line"></span><br><span class="line">let someResult = numbers.some(function(item,index,array)&#123;</span><br><span class="line">    return (item &gt; 2);</span><br><span class="line">&#125;) //someResult = ture</span><br><span class="line"></span><br><span class="line">let filterResult = numbers.filter(function(item,index,array)&#123;</span><br><span class="line">    return (item &gt; 2);</span><br><span class="line">&#125;) //filterResult = [3,4,5,4,3]</span><br><span class="line"></span><br><span class="line">let mapResult = numbers.map(function(item,index,array)&#123;</span><br><span class="line">    return (item * 2);</span><br><span class="line">&#125;) //mapResult = [2,4,6,8,10,8,6,4,2]</span><br><span class="line"></span><br><span class="line">numbers.forEach(function(item,index,array)&#123;</span><br><span class="line">    //执行操作</span><br><span class="line">&#125;) //没有返回值</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="归并方法"><a href="#归并方法" class="headerlink" title="归并方法"></a>归并方法</h4><blockquote>
+<p>可以理解为数组求和（求积）     </p>
+</blockquote>
+<p>reduce()   reduceRight()两个方法都会遍历数组，一个从数组第一项开始遍历，一个从最后一项开始遍历<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">let values = [1,2,3,4,5];</span><br><span class="line">let sum = values.reduce(function(prev,cur,index,array)&#123;</span><br><span class="line">    return prev + cur;</span><br><span class="line">&#125;)//sum = 15</span><br></pre></td></tr></table></figure></p>
+<p>第一次执行时，prev = 1，cur = 2<br>第二次执行是，prev为上一次返回的结果3（prev+cur），cur = 3</p>
+<h3 id="Date类型"><a href="#Date类型" class="headerlink" title="Date类型"></a>Date类型</h3><p>创建日期对象传入的时间格式必须是毫秒数，所以提供了转换格式的方法</p>
+<ul>
+<li>Date.parse()</li>
+<li>Date.UTC()    </li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//把日期格式转换成为毫秒数</span><br><span class="line">let someDate = new Date(&quot;May 25, 2019&quot;);</span><br><span class="line"></span><br><span class="line">//获得当前时间</span><br><span class="line">let nowDate1 = Date.now();</span><br><span class="line">let nowDate2 = +new Date()</span><br></pre></td></tr></table></figure>
+<h4 id="继承的方法"><a href="#继承的方法" class="headerlink" title="继承的方法"></a>继承的方法</h4><p>与其他引用类型一样，Date类型改写了valueOf()，toString()，toLocaleString()三个方法<br>valueOf()方法返回时间对应的毫秒数<br>toString()方法返回带时区信息的日期和时间<br>toLocaleString()方法返回的不带时区信息的日期和时间</p>
+<h4 id="日期格式化方法"><a href="#日期格式化方法" class="headerlink" title="日期格式化方法"></a>日期格式化方法</h4><ul>
+<li>toDateString()</li>
+<li>toTimeString()</li>
+<li>toLocalDateString()</li>
+<li>toLocalTimeString()</li>
+<li>toUTCString()</li>
+</ul>
+<h4 id="日期-时间组件方法"><a href="#日期-时间组件方法" class="headerlink" title="日期/时间组件方法"></a>日期/时间组件方法</h4><blockquote>
+<p>方法很多，不一一列举</p>
+</blockquote>
+<h3 id="RegExp类型"><a href="#RegExp类型" class="headerlink" title="RegExp类型"></a>RegExp类型</h3><blockquote>
+<p>使用RegExp类型来支持正则表达式</p>
+</blockquote>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">let expression = /pattern/ flags;</span><br></pre></td></tr></table></figure>
+<p>支持3个flag标志位</p>
+<ul>
+<li>g：全局模式，并非遇到一个匹配项就停止(global)</li>
+<li>i：不区分大小写(case-insensitive)</li>
+<li>m：多行模式(multiline)</li>
+</ul>
+<p>pattern的内容比较负责，具体见这篇<a href="https://www.cnblogs.com/mmzuo-798/p/7264093.html" target="_blank" rel="noopener">博客</a></p>
+<h4 id="RegExp实例属性"><a href="#RegExp实例属性" class="headerlink" title="RegExp实例属性"></a>RegExp实例属性</h4><p>通过属性可以取得关于模式的各种信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">let parttern = /\[bc\]at/i;</span><br><span class="line">let parttern1 = new RegExp(&quot;\\[bc\\]at&quot;,&quot;i&quot;);</span><br><span class="line"></span><br><span class="line">//global:布尔值，是否设置g标志</span><br><span class="line">alert(parttern.global);   //flase</span><br><span class="line">//ignoreCase: 布尔值，是否设置i位</span><br><span class="line">alert(parttern.ignoreCase);   //ture</span><br><span class="line">//multiline: 布尔值，是否设置m位</span><br><span class="line">alert(parttern.multiline);   //flase</span><br><span class="line">//lastIndex: 整数，表示开始搜索下一个匹配项的字符位置，从0算起</span><br><span class="line">alert(parttern.lastIndex);   //0</span><br><span class="line">//source: 正则表达式的字符串表示，按照字面量形式返回</span><br><span class="line">alert(parttern.source);   //&quot;\[bc\]at&quot;</span><br><span class="line">alert(parttern1.source);   //&quot;\[bc\]at&quot;</span><br></pre></td></tr></table></figure></p>
+<h4 id="RegExp实例方法"><a href="#RegExp实例方法" class="headerlink" title="RegExp实例方法"></a>RegExp实例方法</h4><ul>
+<li><p>exec()<br>  专门为捕获组而设计，接受一个参数（字符串），返回包含第一个匹配信息的数组，没有匹配项是返回null。虽然返回的是数组实例，但是包含两个额外的属性，index和input</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">let text = &quot;cat, bat, sat, fat&quot;;</span><br><span class="line">let pattern1 = /.at/;</span><br><span class="line">let pattern2 = /.at/g;</span><br><span class="line"></span><br><span class="line">let matches1 = pattern1.exec(text);</span><br><span class="line">alert(matches1.index);   //0 匹配项在字符串中的位置</span><br><span class="line">alert(matches1.input);   //&quot;cat,bat,sat,fat&quot; 输入字符串</span><br><span class="line">alert(matches1[0]);      //&quot;cat&quot;</span><br><span class="line"></span><br><span class="line">let matches2 = pattern2.exec(text);</span><br><span class="line">alert(matches2.index);   //0 </span><br><span class="line">alert(matches2.input);   //&quot;cat,bat,sat,fat&quot; </span><br><span class="line">alert(matches2[0]);      //&quot;cat&quot;</span><br><span class="line">alert(pattern2.lastIndex); //3</span><br><span class="line"></span><br><span class="line">matches2 = pattern2.exec(text);</span><br><span class="line">alert(matches2.index);   //5</span><br><span class="line">alert(matches2[0]);      //&quot;bat&quot;</span><br><span class="line">alert(pattern2.lastIndex); //8</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>test()方法<br>  接受一个字符串参数，检测目标字符串是否与某个模式匹配，常用在if语句中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">let test = &quot;000-0000-0000&quot;;</span><br><span class="line">let pattern = /\d&#123;3&#125;-\d&#123;4&#125;-d&#123;4&#125;/;</span><br><span class="line"></span><br><span class="line">if(pattern.test(text))&#123;</span><br><span class="line">    //匹配</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>valueOf()，toString()，toLocaleString()<br>  valueOf()方法返回正则表达式本身<br>  toString()方法返回正则表达式的字面量<br>  toLocaleString()方法返回正则表达式的字面量</p>
+</li>
+</ul>
+<h4 id="RegExp构造函数属性"><a href="#RegExp构造函数属性" class="headerlink" title="RegExp构造函数属性"></a>RegExp构造函数属性</h4><blockquote>
+<p>括号内为缩写</p>
+</blockquote>
+<ul>
+<li>input($_)         ——最近一次要匹配的字符串</li>
+<li>lastMatch($&amp;)     ——最近一次的匹配项</li>
+<li>lastParen($+)     ——最近一次匹配的捕获组</li>
+<li>leftContext($`)   ——input字符串中lastMatch之前的字符串</li>
+<li>rightContext($’)  ——input字符串中lastMatch之后的字符串</li>
+<li>multiline($*)     ——是否采用多行模式<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">let text = &quot;this has been a short summer&quot;;</span><br><span class="line">let patern = /(.)hort/g;</span><br><span class="line">if(pattern.test(text))&#123;</span><br><span class="line">    alert(RegExp.input);            //this has been a short summer</span><br><span class="line">    alert(RegExp.lastMatch);        //short</span><br><span class="line">    alert(RegExp.lastParen);        //s</span><br><span class="line">    alert(RegExp.leftContext);      //this has been a</span><br><span class="line">    alert(RegExp.rightContext);     //summer</span><br><span class="line">    alert(RegExp.multiline);        //flase</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h4 id="模式的局限性"><a href="#模式的局限性" class="headerlink" title="模式的局限性"></a>模式的局限性</h4><p>RegExp存在一定的局限性，有很多不支持的特性</p>
+<h3 id="Function类型"><a href="#Function类型" class="headerlink" title="Function类型"></a>Function类型</h3><p>函数实际上是对象，每个函数都是Function的实例，函数是对象，函数名是指针。<br>函数可以通过++函数声明++语法定义也可以通过++函数表达式++定义函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">//函数声明语法定义</span><br><span class="line">function sum (num1, num2)&#123;</span><br><span class="line">    return num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line">//函数表达式定义</span><br><span class="line">let sum = function(num1, num2)&#123;</span><br><span class="line">    return num1 + num2;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>通过函数声明创建的函数会<strong>函数声明提升</strong>，而通过函数表达式创建的函数只有在执行到所在的代码行时才会被执行。</p>
+<h4 id="没有重载（深入理解）"><a href="#没有重载（深入理解）" class="headerlink" title="没有重载（深入理解）"></a>没有重载（深入理解）</h4><p>创建两个函数名相同的函数，后面的函数会覆盖前面的函数</p>
+<h4 id="作为值的函数"><a href="#作为值的函数" class="headerlink" title="作为值的函数"></a>作为值的函数</h4><p>函数名本身就是变量，所以函数也可以作为值来使用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function callSomeFunction(someFunction,someArgument)&#123;</span><br><span class="line">    return someFunction(someArgument);</span><br><span class="line">&#125;</span><br><span class="line">function add(num)&#123;</span><br><span class="line">    return num+10;</span><br><span class="line">&#125;</span><br><span class="line">let result = callSomeFunction(add, 10);     //20,当要访问函数指针而不执行函数的话，需要用add而不是add()</span><br></pre></td></tr></table></figure></p>
+<p>也可以从函数中返回另一个函数，典型例子：根据对象属性对对象进行排序<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">function creatComparisonFunction(propertyName)&#123;</span><br><span class="line">    return function(object1,object2)&#123;</span><br><span class="line">        let value1 = object1[propertyName];</span><br><span class="line">        let value2 = object2[propertyName];</span><br><span class="line">        return value1-value2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">let data = [&#123;</span><br><span class="line">    name: &quot;Z&quot;,</span><br><span class="line">    age: 12</span><br><span class="line">&#125;,&#123;</span><br><span class="line">    name: &quot;N&quot;,</span><br><span class="line">    age: 18</span><br><span class="line">&#125;];</span><br><span class="line"></span><br><span class="line">data.sort(creatComparisonFunction(&quot;name&quot;));</span><br><span class="line">alert(data[0].name); //N</span><br><span class="line"></span><br><span class="line">data.sort(creatComparisonFunction(&quot;age&quot;));</span><br><span class="line">alert(data[0].name); //Z</span><br></pre></td></tr></table></figure></p>
+<h4 id="函数内部属性"><a href="#函数内部属性" class="headerlink" title="函数内部属性"></a>函数内部属性</h4><p>函数内部有两个特殊的对象：arguments和this<br>arguments除了保存参数之外，还有一个callee的属性，该属性是一个指针，指向拥有这个arguments的函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">//阶乘</span><br><span class="line">function factorial(num)&#123;</span><br><span class="line">    if(num &lt;= 1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        return num * factorial(num-1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//使用callee属性可以解除紧密的耦合关系现象</span><br><span class="line">function factorial(num)&#123;</span><br><span class="line">    if(num &lt;= 1)&#123;</span><br><span class="line">        return 1;</span><br><span class="line">    &#125;else&#123;</span><br><span class="line">        return num * arguments.callee(num-1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>this引用的是函数执行的环境对象<br>ES5规范了另外一个函数对象的属性：caller，该属性保存着调用当前函数的函数的引用，caller属性不能被赋值<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function outer()&#123;</span><br><span class="line">    inner();</span><br><span class="line">&#125;</span><br><span class="line">function inner()&#123;</span><br><span class="line">    alert(inner.caller);    //alert(arguments.callee.caller);</span><br><span class="line">&#125;</span><br><span class="line">outer();    //执行后显示outer()函数的源代码</span><br></pre></td></tr></table></figure></p>
+<h4 id="函数属性和方法"><a href="#函数属性和方法" class="headerlink" title="函数属性和方法"></a>函数属性和方法</h4><p>既然函数是对象，那函数也拥有属性和方法<br>函数拥有两个属性：</p>
+<ul>
+<li>lengh（函数希望接受参数的数量）</li>
+<li>prototype（保存所以的实例方法，之后详细介绍）     </li>
+</ul>
+<p>函数包含两个非继承的方法：</p>
+<ul>
+<li>apply()</li>
+<li>call()</li>
+</ul>
+<p>两个函数的作用都是在特定的作用域（this）调用函数<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">function sun(num1, num2)&#123;</span><br><span class="line">    return num1 + num2;</span><br><span class="line">&#125;</span><br><span class="line">function callSum1(num1, num2)&#123;</span><br><span class="line">    return sum.apply(this, arguments);</span><br><span class="line">&#125;</span><br><span class="line">function callSum2(num1, num2)&#123;</span><br><span class="line">    return sum.apply(this, [sum1, sum2]);</span><br><span class="line">&#125;</span><br><span class="line">function callSum3(num1, num2)&#123;</span><br><span class="line">    return sum.call(this, sum1, sum2)</span><br><span class="line">&#125;</span><br><span class="line">console.log(callSum1(10,10));   //20</span><br><span class="line">console.log(callSum2(10,10));   //20</span><br><span class="line">console.log(callSum3(10,10));   //20</span><br></pre></td></tr></table></figure></p>
+<p>两个函数的强大之处是它们可以扩充函数赖以生存的作用域<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">window.color = &quot;red&quot;;</span><br><span class="line">let o = &#123;color: &quot;blue&quot;&#125;;</span><br><span class="line"></span><br><span class="line">function sayColor()&#123;</span><br><span class="line">    alert(this.color);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 不同的作用域</span><br><span class="line">sayColor();         //&quot;red&quot;</span><br><span class="line">sayColor(this);     //&quot;red&quot;</span><br><span class="line">sayColor(window);   //&quot;red&quot;</span><br><span class="line">sayColor(o);        //&quot;blue&quot;</span><br></pre></td></tr></table></figure></p>
+<p>另外，函数还有一个方法：bind()<br>该方法会创建一个函数实例，其this值会绑定到传给bind()函数的值</p>
+<h3 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h3><h3 id="单体内置对象"><a href="#单体内置对象" class="headerlink" title="单体内置对象"></a>单体内置对象</h3>
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/2018/11/13/Git解决冲突/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object类型"><span class="post-toc-number">1.</span> <span class="post-toc-text">Object类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Array类型"><span class="post-toc-number">2.</span> <span class="post-toc-text">Array类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#检测数组"><span class="post-toc-number">2.1.</span> <span class="post-toc-text">检测数组</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#转换方法"><span class="post-toc-number">2.2.</span> <span class="post-toc-text">转换方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#栈方法"><span class="post-toc-number">2.3.</span> <span class="post-toc-text">栈方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#队列方法"><span class="post-toc-number">2.4.</span> <span class="post-toc-text">队列方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#重排序方法"><span class="post-toc-number">2.5.</span> <span class="post-toc-text">重排序方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#操作方法"><span class="post-toc-number">2.6.</span> <span class="post-toc-text">操作方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#位置方法"><span class="post-toc-number">2.7.</span> <span class="post-toc-text">位置方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#迭代方法"><span class="post-toc-number">2.8.</span> <span class="post-toc-text">迭代方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#归并方法"><span class="post-toc-number">2.9.</span> <span class="post-toc-text">归并方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Date类型"><span class="post-toc-number">3.</span> <span class="post-toc-text">Date类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#继承的方法"><span class="post-toc-number">3.1.</span> <span class="post-toc-text">继承的方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#日期格式化方法"><span class="post-toc-number">3.2.</span> <span class="post-toc-text">日期格式化方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#日期-时间组件方法"><span class="post-toc-number">3.3.</span> <span class="post-toc-text">日期/时间组件方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#RegExp类型"><span class="post-toc-number">4.</span> <span class="post-toc-text">RegExp类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#RegExp实例属性"><span class="post-toc-number">4.1.</span> <span class="post-toc-text">RegExp实例属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#RegExp实例方法"><span class="post-toc-number">4.2.</span> <span class="post-toc-text">RegExp实例方法</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#RegExp构造函数属性"><span class="post-toc-number">4.3.</span> <span class="post-toc-text">RegExp构造函数属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#模式的局限性"><span class="post-toc-number">4.4.</span> <span class="post-toc-text">模式的局限性</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Function类型"><span class="post-toc-number">5.</span> <span class="post-toc-text">Function类型</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#没有重载（深入理解）"><span class="post-toc-number">5.1.</span> <span class="post-toc-text">没有重载（深入理解）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#作为值的函数"><span class="post-toc-number">5.2.</span> <span class="post-toc-text">作为值的函数</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#函数内部属性"><span class="post-toc-number">5.3.</span> <span class="post-toc-text">函数内部属性</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#函数属性和方法"><span class="post-toc-number">5.4.</span> <span class="post-toc-text">函数属性和方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#基本包装类型"><span class="post-toc-number">6.</span> <span class="post-toc-text">基本包装类型</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#单体内置对象"><span class="post-toc-number">7.</span> <span class="post-toc-text">单体内置对象</span></a></li></ol>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p style="line-height: 45px">Copyright ©  2017  Hexo</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+</body>
+</html>
