@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  
+  <meta name="keywords" content="雷紫薇">
+  <meta name="description" content="Adiana‘s blog">
+  
+  <title>Hexo</title>
+  
+    <!-- stylesheets list from config.yml -->
+    
+      <link rel="stylesheet" href="/css/materialize.min.css">
+    
+      <link rel="stylesheet" href="/css/main.min.css">
+    
+  
+  <style type="text/css">
+      html{
+          font-family: sans-serif;
+          font-weight: 300;
+      }
+      @font-face {
+          font-family: 'Material Icons';
+          font-style: normal;
+          font-weight: 400;
+          src: url(/fonts/MaterialIcons-Regular.eot);
+          src: url(/fonts/MaterialIcons-Regular.woff2) format('woff2'),
+          url(/fonts/MaterialIcons-Regular.woff) format('woff'),
+          url(/fonts/MaterialIcons-Regular.ttf) format('truetype')
+      }
+  </style>
+<link rel="shortcut icon" href="/source/favicon.ico">
+</head>
+<body>
+<div id="menu-box"><a href="javascript:void(0)" id="menu" data-activates="slide-out" class="button-collapse menu"><span class="nav-btn"></span></a></div>
+<div id="menu-outer">
+  <div id="menu-inner">
+      <ul id="slide-out" class="side-nav">
+    <div class="nav-header" style="background-image: url(/images/header-bg.png);background-color:#26A69A">
+    <div class="header-box"><img src="/images/header.png" ondragstart="return false;"></div>
+    <p>Adiana</p>
+    <div class="nav-link">
+        
+        
+        <a href="https://github.com/sin7777" target="_blank"><div class="link-box github"></div></a>
+        
+        
+        
+        
+    </div>
+    <div class="nav-search">
+        <form id="search-form"> <!-- 搜索框相关 -->
+            <input type="text" id="local-search-input" name="q" results="0" placeholder="搜索..." class="search form-control" autocomplete="off" autocorrect="off">
+            <div class="nav-search-img"><i class="material-icons">search</i></div>
+        </form>
+        <div id="local-search-result"></div> <!-- 搜索结果区 -->
+        <p class="no-result">无搜索结果</p>
+    </div>
+</div>
+    <!--Homepage-->
+
+<li class="nav-list">
+    <a href="/" target="_self">
+        <div class="nav-ico"><i class="material-icons">home</i> </div><p>主页</p>
+    </a>
+</li>
+
+<!--archives-->
+
+<li class="nav-list dropdown-btn">
+    <a class target="_self">
+        <div class="nav-ico"><i class="material-icons">assignment</i></div><p>归档</p><div class="dropdown-ico"><i class="material-icons">arrow_drop_down</i></div>
+    </a>
+</li>
+
+<ul class="dropdown-menu dropdown">
+    <li class="nav-dropdown-list">
+        <a class="archive-link" href="/archives/2019/03/">March 2019<span class="archive-count">2</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2019/02/">February 2019<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2018/11/">November 2018<span class="archive-count">1</span></a></li><li class="nav-dropdown-list"><a class="archive-link" href="/archives/2018/03/">March 2018<span class="archive-count">1</span></a>
+    </li>
+</ul>
+<!--categories-->
+
+<ul class="dropdown-menu dropdown">
+    <li class="nav-dropdown-list">
+        
+    </li>
+</ul>
+<!--tags-->
+
+<li class="nav-list">
+    <a href="/archives" target="_self">
+        <div class="nav-ico"><i class="material-icons">bookmark</i> </div><p>标签</p>
+    </a>
+</li>
+
+<!--photo-->
+
+<!--friends-->
+
+<!--about-->
+
+
+</ul>
+
+  </div>
+</div>
+
+<div id="content-outer">
+  <div id="content-inner">
+    
+<article id="post">
+  <div class="post-page-title" style="background-color:#26A69A;background-image:url(/images/purple2.jpg)">
+  <h2>重新学习React.md</h2>
+    
+  <p>作者:Adiana &nbsp&nbsp 发布于:<time datetime="2019-03-15T18:08:40.000Z">
+          2019-03-16
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <blockquote>
+<p>从第一次接触React到现在已经过去了将近10个月的时间，当初对于前端知识的薄弱性让我很生硬地才接受了React的一些思想和方法，最近因为找实习的时候学长推荐我先看看redux，我觉得官方文档给我的灌输太难接受了，所以还是翻出了当初入门的教程，这篇教程是博主翻译Microsoft的印度裔前端工程师kirupa的博客，内容由浅入深，加上了这位小哥的个人理解之后使React非常通熟易懂，并且我惊喜得发现其中有一些高级教程适合现阶段看，下面是这次学习中的知识点整理</p>
+</blockquote>
+<h1 id="React简介"><a href="#React简介" class="headerlink" title="React简介"></a>React简介</h1><h4 id="多页应用的问题"><a href="#多页应用的问题" class="headerlink" title="多页应用的问题"></a>多页应用的问题</h4><ul>
+<li>原页面完全杯销毁</li>
+<li>体验非常不好，速度很慢</li>
+<li>无法保存用户数据<h4 id="单页应用（SPA）"><a href="#单页应用（SPA）" class="headerlink" title="单页应用（SPA）"></a>单页应用（SPA）</h4></li>
+<li>用户和应用程序交互时只需要改变部分页面</li>
+<li>体验更佳流畅，视觉元素可以更好过渡<h4 id="单页应用的问题"><a href="#单页应用的问题" class="headerlink" title="单页应用的问题"></a>单页应用的问题</h4></li>
+<li>大部分时间会花在保持数据与 UI 同步上</li>
+<li>DOM 操作很慢很慢</li>
+<li>处理 HTML 模板会很痛苦<h4 id="React孕育而生"><a href="#React孕育而生" class="headerlink" title="React孕育而生"></a>React孕育而生</h4></li>
+<li>自动化的 UI 状态管理：只需关注UI所处的最终状态</li>
+<li>虚拟DOM 操作：React 通过比较虚拟 DOM 和真实 DOM 之间的差别，查明哪个改变很重要，然后在一个称为 Reconciliation 的过程中作出最少量的 DOM 改变，以确保一切保持最新。</li>
+<li>多组件：用来创建真正可组合 UI 的 API</li>
+<li>JSX语法：完全在 JavaScript 中定义 UI</li>
+<li>只关心View：只是 MVC 架构中的 V</li>
+</ul>
+<h1 id="创建第一个React应用"><a href="#创建第一个React应用" class="headerlink" title="创建第一个React应用"></a>创建第一个React应用</h1><h4 id="JSX被转译成-HTML-和-JS-的两种方法"><a href="#JSX被转译成-HTML-和-JS-的两种方法" class="headerlink" title="JSX被转译成 HTML 和 JS 的两种方法"></a>JSX被转译成 HTML 和 JS 的两种方法</h4><ul>
+<li><p>围绕 Node 以及一些构建工具（比如 Webpack）来设置开发环境。在这种环境中，每次执行构建时，所有 JSX 被自动转换为 JS，放在磁盘上，让我们可以像标准 JavaScript 文件一样引用。</p>
+</li>
+<li><p>让浏览器在运行时自动将 JSX 转换为 JavaScript。我们直接像 JavaScript 一样用 JSX，浏览器负责剩下的转换。——需要引入babel</p>
+</li>
+</ul>
+<h1 id="深层组件的数据传递"><a href="#深层组件的数据传递" class="headerlink" title="深层组件的数据传递"></a>深层组件的数据传递</h1><h4 id="拓展运算符-…props"><a href="#拓展运算符-…props" class="headerlink" title="拓展运算符{…props}"></a>拓展运算符{…props}</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">var Display = React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return(</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;p&gt;&#123;this.props.color&#125;&lt;/p&gt;</span><br><span class="line">        &lt;p&gt;&#123;this.props.num&#125;&lt;/p&gt;</span><br><span class="line">        &lt;p&gt;&#123;this.props.size&#125;&lt;/p&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var Label = React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;Display &#123;...this.props&#125;/&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">var Shirt = React.createClass(&#123;</span><br><span class="line">  render: function() &#123;</span><br><span class="line">    return (</span><br><span class="line">      &lt;div&gt;</span><br><span class="line">        &lt;Label &#123;...this.props&#125;/&gt;</span><br><span class="line">      &lt;/div&gt;</span><br><span class="line">    );</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">ReactDOM.render(</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;Shirt color=&quot;steelblue&quot; num=&quot;3.14&quot; size=&quot;medium&quot; /&gt;</span><br><span class="line">  &lt;/div&gt;,</span><br><span class="line">  document.querySelector(&quot;#container&quot;)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+<h1 id="处理事件"><a href="#处理事件" class="headerlink" title="处理事件"></a>处理事件</h1><p>SyntheticEvent</p>
+<p>e</p>
+<h1 id="组件的生命周期"><a href="#组件的生命周期" class="headerlink" title="组件的生命周期"></a>组件的生命周期</h1><p>生命周期方法：</p>
+<ul>
+<li>componentWillMount</li>
+<li>componentDidMount</li>
+<li>componentWillUnmount</li>
+<li>componentWillUpdate</li>
+<li>componentDidUpdate</li>
+<li>shouldComponentUpdate</li>
+<li>componentWillReceiveProps</li>
+</ul>
+<p>另外还有三个非周期方法：</p>
+<ul>
+<li>getInitialState</li>
+<li>getDefaultProps</li>
+<li>render</li>
+</ul>
+<h4 id="生命周期分为四种变化"><a href="#生命周期分为四种变化" class="headerlink" title="生命周期分为四种变化"></a>生命周期分为四种变化</h4><ul>
+<li>初始渲染阶段<br><img src="https://www.kirupa.com/react/render_144.png" alt="初始渲染阶段"></li>
+<li>更新阶段<br><img src="https://www.kirupa.com/react/images/statechange_144.png" alt="更新阶段"></li>
+<li>处理prop 改变<br><img src="https://www.kirupa.com/react/images/propschange_144.png" alt="处理 prop 改变"></li>
+<li>卸载阶段<br><img src="https://www.kirupa.com/react/images/unmount_144.png" alt="卸载阶段"></li>
+</ul>
+<p><a href="https://www.kirupa.com/react/lifecycle_example.htm" target="_blank" rel="noopener">打开这个页面F12看组件生命周期的变化过程</a></p>
+<h1 id="React-Router"><a href="#React-Router" class="headerlink" title="React Router"></a>React Router</h1><p>Link是React Router的组件，它与a相似，但提供更多的功能</p>
+<p>在 Link 实例上设置一个 activeClassName 的属性</p>
+<h1 id="在React中访问真实-DOM-节点‘"><a href="#在React中访问真实-DOM-节点‘" class="headerlink" title="在React中访问真实 DOM 节点‘"></a>在React中访问真实 DOM 节点‘</h1><p>在 React 中使用的是虚拟DOM节点，如果要操作真实的DOM节点，就需要使用refs，refs的使用推荐使用尖头函数的方式<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ref=&#123;(el) =&gt; this._input = el&#125;</span><br></pre></td></tr></table></figure></p>
+<h1 id="Redux"><a href="#Redux" class="headerlink" title="Redux"></a>Redux</h1><p>redux解决问题的方法：<br><img src="https://css-tricks.com/wp-content/uploads/2016/03/redux-article-3-03.svg" alt="image"></p>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
+  <a href="/2019/03/17/Js构造函数与继承/" id="post_nav-newer" class="post-nav-content prev-content">
+      新篇
+  </a>
+    
+
+
+  <!-- Next Nav -->
+    
+  <a href="/2019/02/13/Js引用类型/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#React简介"><span class="post-toc-number">1.</span> <span class="post-toc-text">React简介</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#多页应用的问题"><span class="post-toc-number">1.0.0.1.</span> <span class="post-toc-text">多页应用的问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#单页应用（SPA）"><span class="post-toc-number">1.0.0.2.</span> <span class="post-toc-text">单页应用（SPA）</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#单页应用的问题"><span class="post-toc-number">1.0.0.3.</span> <span class="post-toc-text">单页应用的问题</span></a></li><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#React孕育而生"><span class="post-toc-number">1.0.0.4.</span> <span class="post-toc-text">React孕育而生</span></a></li></ol></li></ol><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#创建第一个React应用"><span class="post-toc-number">2.</span> <span class="post-toc-text">创建第一个React应用</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#JSX被转译成-HTML-和-JS-的两种方法"><span class="post-toc-number">2.0.0.1.</span> <span class="post-toc-text">JSX被转译成 HTML 和 JS 的两种方法</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#深层组件的数据传递"><span class="post-toc-number">3.</span> <span class="post-toc-text">深层组件的数据传递</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#拓展运算符-…props"><span class="post-toc-number">3.0.0.1.</span> <span class="post-toc-text">拓展运算符{…props}</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#处理事件"><span class="post-toc-number">4.</span> <span class="post-toc-text">处理事件</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#组件的生命周期"><span class="post-toc-number">5.</span> <span class="post-toc-text">组件的生命周期</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-4"><a class="post-toc-link" href="#生命周期分为四种变化"><span class="post-toc-number">5.0.0.1.</span> <span class="post-toc-text">生命周期分为四种变化</span></a></li></ol></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#React-Router"><span class="post-toc-number">6.</span> <span class="post-toc-text">React Router</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#在React中访问真实-DOM-节点‘"><span class="post-toc-number">7.</span> <span class="post-toc-text">在React中访问真实 DOM 节点‘</span></a></li><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Redux"><span class="post-toc-number">8.</span> <span class="post-toc-text">Redux</span></a></li>
+</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
+  </div>
+</div>
+<div id="bottom-outer">
+  <div id="bottom-inner">
+    <a id="top-button" onfocus="this.blur();"><div class="up upinbody" style="background-color:#26A69A"><i class="material-icons material-up">vertical_align_top</i></div></a>
+
+
+<p style="line-height: 45px">Copyright ©  2017  Hexo</p>
+<p style="line-height: 45px">Powered by <a href="https://hexo.io/" target="_blank"> Hexo </a> && Theme - <a href="https://github.com/moumao/hexo-theme-Vateral" target="_blank">Vateral</a></p>
+
+  </div>
+</div>
+
+<!--影集界面需要的资源-->
+
+
+
+<!-- scripts list from theme config.yml -->
+
+<script src="/js/jquery-3.1.1.min.js"></script>
+
+<script src="/js/materialize.min.js"></script>
+
+<script src="/js/main.min.js"></script>
+
+
+<script>
+    NProgress.start();
+    NProgress.done();
+    lazy();
+    links();
+    window.onpopstate = menu();
+    //pjax操作
+    $(document).pjax('a:not(.nopjax)', '#content-inner', {fragment:'#content-inner', timeout:8000});
+    $(document).on('pjax:start', NProgress.start).on('pjax:end', NProgress.done)
+        .on('pjax:end', () => {
+            dowmdiv();
+            lazy();
+            toc();
+            links();
+            menu();
+        });
+</script>
+
+</body>
+</html>
