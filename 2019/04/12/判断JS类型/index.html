@@ -109,152 +109,70 @@
 
 <div id="content-outer">
   <div id="content-inner">
-    <div id="tag">
-    <div id="recent-posts">
-  
-      <div class="recent-post-item lazy" style="background-color:#26A69A" data-original="/images/random/vateral-17.png">
-        <a class="recent-post-link" href="/2019/04/12/判断JS类型/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2019/04/12/判断JS类型/">判断JS类型.md</a></p>
+    
+<article id="post">
+  <div class="post-page-title" style="background-color:#26A69A;background-image:url(/images/random/vateral-11.png)">
+  <h2>判断JS类型.md</h2>
+    
+  <p>作者:Adiana &nbsp&nbsp 发布于:<time datetime="2019-04-12T09:45:50.000Z">
+          2019-04-12
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <p>JS基本的判断类型的方法有三个，分别是：</p>
+<ul>
+<li>typeof  JS类型判断函数</li>
+<li>instaneof  判断构造函数原型</li>
+<li>Object.prototype.toString()</li>
+</ul>
+<h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><p>使用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">typeof true === &apos;boolean&apos;; //ture</span><br></pre></td></tr></table></figure></p>
+<p>判断的结果有六种：（返回字符串）</p>
+<ul>
+<li>“number”</li>
+<li>“boolean”</li>
+<li>“string”</li>
+<li>“function”</li>
+<li>“object”</li>
+<li>“undefined” </li>
+</ul>
+<p>结果为”object”的有三种情况：==数组、对象、正则==<br>typeof最常用到的地方是判断一个已经定义的变量是否被赋值，即用到”undefined”这个结果</p>
+<h3 id="instanceof"><a href="#instanceof" class="headerlink" title="instanceof"></a>instanceof</h3><p>instanceof需要两个操作数，用法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a instanceof b</span><br></pre></td></tr></table></figure>
+<p>判断的结果只有==ture==和==false==两种</p>
+<p>instanceof运算符是用来测试一个对象是否在其原型链原型构造函数的属性。其语法是==object instanceof constructor==</p>
+<p>用于判断一个变量是不是某个对象的子类，它会沿着原型链<strong>proto</strong>向上找，如果找到匹配的对象，就返回true，否则返回false</p>
+<p>左操作数必须为==对象==，如果不是则直接返回false</p>
+<p>右操作数必须是==函数==，如果不是则直接抛出typeError</p>
+<h3 id="Object-prototype-toString"><a href="#Object-prototype-toString" class="headerlink" title="Object.prototype.toString()"></a>Object.prototype.toString()</h3><p>JavaScript 标准文档只给出了一种获取 [[Class]] 值的方法，那就是使用 Object.prototype.toString。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Object.prototype.toString.call([])    // &quot;[object Array]&quot;</span><br><span class="line">Object.prototype.toString.call(&#123;&#125;)    // &quot;[object Object]&quot;</span><br><span class="line">Object.prototype.toString.call(2)    // &quot;[object Number]&quot;</span><br></pre></td></tr></table></figure>
+  </div>
+  <!--评论块-->
+    
 
-          <!--date-->
-          
-            <p class="post-time">Adiana &nbsp &nbsp 发布于:<time datetime="2019-04-12T09:45:50.000Z">
-              2019-04-12
-            </time>
-            </p>
-          
-
-          <!--tags-->
-
-          标签:
-            
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Js/">Js</a></li></ul>
-            
-          <!--分类-->
-
-          分类:
-            
-            暂无分类
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                JS基本的判断类型的方法有三个，分别是：
-
-typeof  JS类型判断函数
-instaneof  判断构造函数原型
-Object.prototype.toString()
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
 
 
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2019/04/12/判断JS类型/">全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-      <div class="recent-post-item lazy" style="background-color:#26A69A" data-original="/images/purple1.jpg">
-        <a class="recent-post-link" href="/2019/03/17/Js构造函数与继承/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2019/03/17/Js构造函数与继承/">Js构造函数与继承.md</a></p>
-
-          <!--date-->
-          
-            <p class="post-time">Adiana &nbsp &nbsp 发布于:<time datetime="2019-03-16T18:04:32.000Z">
-              2019-03-17
-            </time>
-            </p>
-          
-
-          <!--tags-->
-
-          标签:
-            
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Js/">Js</a></li></ul>
-            
-          <!--分类-->
-
-          分类:
-            
-            暂无分类
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                
-理解概念
-
-对象工厂模式
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2019/03/17/Js构造函数与继承/">全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-      <div class="recent-post-item lazy" style="background-color:#26A69A" data-original="/images/tap3.jpg">
-        <a class="recent-post-link" href="/2019/02/13/Js引用类型/">
-        <div class="post-hover">
-          <!--title-->
-          <p class="post-title"><a href="/2019/02/13/Js引用类型/">Js引用类型</a></p>
-
-          <!--date-->
-          
-            <p class="post-time">Adiana &nbsp &nbsp 发布于:<time datetime="2019-02-13T12:23:05.000Z">
-              2019-02-13
-            </time>
-            </p>
-          
-
-          <!--tags-->
-
-          标签:
-            
-            <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Js/">Js</a></li></ul>
-            
-          <!--分类-->
-
-          分类:
-            
-            暂无分类
-            
-
-          <!--excerpt-->
-          <div class="post-excerpt">
-            <p>
-              摘要：
-              
-                
-引用类型是js中非常重要的一种数据格式，js赋予了这种数据格式非常强大的属性以及方法，而且也给出了很大的扩展空间，这使得之后的框架可以在此基础上发展起来
-
-Js中给出的引用类型分为7类，下面一一介绍
-
-              
-            </p>
-          </div>
-          <div class="post-more"><a href="/2019/02/13/Js引用类型/">全文阅读</a></div>
-        </div>
-        </a>
-      </div>
-  
-  <nav class="paging">
-    <span class="page-number current">1</span>
+  <!-- Next Nav -->
+    
+  <a href="/2019/03/17/Js构造函数与继承/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
 </nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#typeof"><span class="post-toc-number">1.</span> <span class="post-toc-text">typeof</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#instanceof"><span class="post-toc-number">2.</span> <span class="post-toc-text">instanceof</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#Object-prototype-toString"><span class="post-toc-number">3.</span> <span class="post-toc-text">Object.prototype.toString()</span></a></li></ol>
 </div>
-
-
-</div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
   </div>
 </div>
 <div id="bottom-outer">
