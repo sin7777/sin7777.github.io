@@ -110,17 +110,45 @@
 <div id="content-outer">
   <div id="content-inner">
     
+<article id="post">
+  <div class="post-page-title" style="background-color:#26A69A;background-image:url(/images/random/vateral-17.png)">
+  <h2>JS TIPS</h2>
+    
+  <p>作者:Adiana &nbsp&nbsp 发布于:<time datetime="2019-07-24T04:32:49.000Z">
+          2019-07-24
+    </time>
+  </p>
+    
+  </div>
+  <div class="post-page-content">
+  <h2 id="下载网页的table-转-Excel"><a href="#下载网页的table-转-Excel" class="headerlink" title="下载网页的table 转 Excel"></a>下载网页的table 转 Excel</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> html = <span class="string">"&lt;html&gt;&lt;head&gt;&lt;meta charset='utf-8' /&gt;&lt;/head&gt;&lt;body&gt;"</span> + <span class="built_in">document</span>.getElementsByTagName(<span class="string">"table"</span>)[<span class="number">2</span>].outerHTML + <span class="string">"&lt;/body&gt;&lt;/html&gt;"</span>;</span><br><span class="line"><span class="comment">//拿到HTML上面表格所在位置的内容</span></span><br><span class="line"><span class="keyword">var</span> blob = <span class="keyword">new</span> Blob([html], &#123; <span class="attr">type</span>: <span class="string">"application/vnd.ms-excel"</span> &#125;);</span><br><span class="line"><span class="comment">//把上面拿到的内容转成二进制文件流，格式是excel</span></span><br><span class="line"><span class="keyword">let</span> link = <span class="built_in">document</span>.createElement(<span class="string">"a"</span>);</span><br><span class="line"><span class="comment">//创建一个&lt;a&gt;标签（这个标签用来下载）</span></span><br><span class="line">link.href = URL.createObjectURL(blob);</span><br><span class="line"><span class="comment">//&lt;a&gt;标签下载的url是刚刚第二句的二进制文件的url</span></span><br><span class="line">link.download = <span class="string">"报表.xls"</span>;</span><br><span class="line"><span class="comment">//指定下载文件名</span></span><br><span class="line"><span class="built_in">document</span>.body.appendChild(link);</span><br><span class="line"><span class="comment">//把标签放入HTML节点</span></span><br><span class="line">link.click();</span><br><span class="line"><span class="comment">//模拟点击这个&lt;a&gt;标签</span></span><br><span class="line"><span class="built_in">document</span>.body.removeChild(link); </span><br><span class="line"><span class="comment">//删除&lt;a&gt;标签</span></span><br></pre></td></tr></table></figure>
+
+  </div>
+  <!--评论块-->
+    
+
+</article>
+<nav class="post-nav">
+  <!-- Prev Nav -->
+    
 
 
-<div class="tags">
-  
-    <div id="archive">
-        
-          <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Js/">Js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/React/">React</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/">Vue</a></li></ul>
-        
-    </div>
-  
+  <!-- Next Nav -->
+    
+  <a href="/2019/06/25/前端培训/" id="post_nav-older" class="post-nav-content next-content">
+      旧篇
+  </a>
+    
+</nav>
+<div class="post-toc-btn"><i class="material-icons">format_list_numbered</i></div>
+<div class="post-toc-none"><p>(无)</p></div>
+<div class="post-toc-box">
+    <ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#下载网页的table-转-Excel"><span class="post-toc-number">1.</span> <span class="post-toc-text">下载网页的table 转 Excel</span></a></li></ol>
 </div>
+<!--<div class="post-back"><i class="material-icons">arrow_back</i></div>-->
+<script type="text/javascript">
+    menu();
+</script>
   </div>
 </div>
 <div id="bottom-outer">
